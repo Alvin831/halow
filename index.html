@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff8f6" />
+  <title>Untuk Kaykayyy, Selalu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#3c3134',
+            rose: '#d97987',
+            blush: '#f6dfe1',
+            shell: '#fff8f6',
+            sage: '#a8b9a5',
+            butter: '#f5e4b3'
+          },
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif'],
+            display: ['Cormorant Garamond', 'serif'],
+            hand: ['Caveat', 'cursive']
+          },
+          boxShadow: {
+            soft: '0 18px 50px rgba(91, 58, 64, .10)',
+            paper: '0 12px 30px rgba(91, 58, 64, .12)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #fff8f6; color: #3c3134; }
+    .paper-grain { background-image: radial-gradient(rgba(217,121,135,.08) .7px, transparent .7px); background-size: 13px 13px; }
+    .hero-wash { background: radial-gradient(circle at 16% 10%, rgba(246,223,225,.85), transparent 35%), radial-gradient(circle at 88% 15%, rgba(245,228,179,.55), transparent 30%), #fff8f6; }
+    .reveal { animation: reveal .8s cubic-bezier(.22,1,.36,1) both; }
+    .delay-1 { animation-delay: .12s; } .delay-2 { animation-delay: .22s; } .delay-3 { animation-delay: .32s; }
+    @keyframes reveal { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .flip-card { perspective: 1000px; }
+    .flip-inner { transition: transform .65s cubic-bezier(.2,.75,.25,1); transform-style: preserve-3d; }
+    .flip-card.is-flipped .flip-inner { transform: rotateY(180deg); }
+    .flip-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+    .flip-back { transform: rotateY(180deg); }
+    .heart { position: fixed; pointer-events: none; z-index: 50; animation: float-heart 2.1s ease-out forwards; }
+    @keyframes float-heart { 0% { opacity: 0; transform: translateY(12px) scale(.5) rotate(0); } 15% { opacity: 1; } 100% { opacity: 0; transform: translateY(-90vh) scale(1.15) rotate(25deg); } }
+    .scratch-wrap canvas { touch-action: none; }
+    .music-playing .music-bars span { animation: equalize .8s ease-in-out infinite alternate; }
+    .music-playing .music-bars span:nth-child(2) { animation-delay: -.4s; }
+    .music-playing .music-bars span:nth-child(3) { animation-delay: -.2s; }
+    @keyframes equalize { from { height: 5px; } to { height: 18px; } }
+    .envelope { transition: transform .2s ease, box-shadow .2s ease; }
+    .envelope:hover { transform: translateY(-4px) rotate(-1deg); box-shadow: 0 18px 32px rgba(91,58,64,.14); }
+    .toast { animation: toast-in .3s ease-out both; }
+    @keyframes toast-in { from { opacity: 0; transform: translate(-50%, 16px); } to { opacity: 1; transform: translate(-50%, 0); } }
+  </style>
+</head>
+<body class="font-sans paper-grain">
+  <header class="hero-wash min-h-[92vh] overflow-hidden">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-7 lg:px-10 reveal">
+      <a href="#atas" class="font-display text-2xl font-bold tracking-tight text-ink">untuk Kaykayyy<span class="text-rose">.</span></a>
+      <button id="musicButton" class="group flex items-center gap-3 rounded-full border border-rose/20 bg-white/70 px-4 py-2.5 text-xs font-semibold text-ink shadow-sm backdrop-blur transition hover:border-rose/50" aria-label="Putar atau jeda musik">
+        <span class="music-bars flex h-5 items-end gap-0.5" aria-hidden="true"><span class="h-2 w-1 rounded-full bg-rose"></span><span class="h-3 w-1 rounded-full bg-rose"></span><span class="h-1.5 w-1 rounded-full bg-rose"></span></span>
+        <span id="musicLabel">Putar lagu</span>
+        <i data-lucide="music-2" class="h-4 w-4 text-rose"></i>
+      </button>
+    </nav>
+
+    <main id="atas" class="mx-auto max-w-6xl px-6 pb-20 pt-10 lg:px-10 lg:pt-14">
+      <section class="reveal delay-1 mx-auto max-w-3xl text-center">
+        <p class="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[.22em] text-rose"><span class="h-px w-8 bg-rose"></span> sebuah ruang kecil</p>
+        <h1 class="font-display text-6xl font-semibold leading-[.9] tracking-tight text-ink sm:text-7xl lg:text-8xl">Hari ini, <em class="font-hand font-medium text-rose">Kaykayyy</em> tetap hebat.</h1>
+        <p class="mx-auto mt-7 max-w-md text-[15px] leading-7 text-ink/65">Simpan halaman ini untuk hari-hari ketika dunia terasa sedikit terlalu ramai. Ada beberapa hal kecil di sini yang sengaja dibuat untukmu.</p>
+        <a href="#surat" class="mt-9 inline-flex items-center gap-3 rounded-full bg-ink px-6 py-3.5 text-sm font-bold text-white shadow-paper transition hover:-translate-y-0.5 hover:bg-rose">Buka suratnya <i data-lucide="arrow-down-right" class="h-4 w-4"></i></a>
+      </section>
+    </main>
+    <div class="mx-auto max-w-6xl px-6 pb-7 lg:px-10"><div class="flex items-center gap-3 text-xs font-semibold text-ink/45"><span>geser perlahan</span><span class="h-px w-12 bg-ink/20"></span><i data-lucide="mouse" class="h-4 w-4"></i></div></div>
+  </header>
+
+  <section id="surat" class="mx-auto max-w-6xl px-6 py-24 lg:px-10 lg:py-32">
+    <div class="mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+      <div><p class="mb-3 text-xs font-bold uppercase tracking-[.22em] text-rose">kalau sedang butuh</p><h2 class="font-display text-5xl font-semibold leading-none sm:text-6xl">Buka satu saja.</h2></div>
+      <p class="max-w-xs text-sm leading-6 text-ink/55">Tidak perlu alasan besar untuk mengambil jeda. Pilih yang paling terasa dekat hari ini.</p>
+    </div>
+    <div class="grid gap-5 sm:grid-cols-2">
+      <button class="envelope group rounded-sm border border-rose/15 bg-[#fbeaec] p-7 text-left shadow-soft" data-message="Aku tahu banget kamu pasti kesel dan gedeg banget hari ini. Wajar banget kalau kamu emosi! Punya temen yang lepas tanggung jawab itu emang ngeselin. Tapi asli, kamu keren banget tetap profesional dan bisa ngelewatin kekacauan hari ini sendirian. Dia yang rugi gak bisa diajak kerja sama, tapi kamu yang kelihatan paling hebat!"><span class="mb-12 flex h-12 w-12 items-center justify-center rounded-full bg-white/70 text-rose"><i data-lucide="flame" class="h-5 w-5"></i></span><span class="block text-xs font-bold uppercase tracking-widest text-rose/70">kartu 1</span><span class="mt-2 block font-display text-3xl font-semibold leading-none">buka saat lagi<br>nahan emosi</span><span class="mt-8 flex items-center gap-2 text-xs font-bold text-ink/60">buka perlahan <i data-lucide="arrow-up-right" class="h-3 w-3 transition group-hover:translate-x-1 group-hover:-translate-y-1"></i></span></button>
+      <button class="envelope group rounded-sm border border-sage/20 bg-[#edf2eb] p-7 text-left shadow-soft" data-message="Tarik napas pelan-pelan ya... exhale.Kelas hari ini udah lewat! Kamu udah berjuang sendirian seharian ini dan kamu berhasil handle semuanya dengan luar biasa. Sekarang saatnya lepasin semua beban pikiran itu. Istirahat yang cukup ya, kamu udah melakukan yang terbaik hari ini. Proud of you, Kaykayy!!"><span class="mb-12 flex h-12 w-12 items-center justify-center rounded-full bg-white/70 text-sage"><i data-lucide="wind" class="h-5 w-5"></i></span><span class="block text-xs font-bold uppercase tracking-widest text-sage">kartu 2</span><span class="mt-2 block font-display text-3xl font-semibold leading-none">buka saat merasa<br>capek &amp; gupuh</span><span class="mt-8 flex items-center gap-2 text-xs font-bold text-ink/60">buka perlahan <i data-lucide="arrow-up-right" class="h-3 w-3 transition group-hover:translate-x-1 group-hover:-translate-y-1"></i></span></button>
+      <button class="envelope group rounded-sm border border-butter/40 bg-[#fff7df] p-7 text-left shadow-soft" data-message="Tadi kamu mungkin ngerasa sendirian nanggung semuanya. Tapi begitu kelas selesai, inget ya kalau kamu punya aku. Kamu gak perlu pura-pura kuat di depan aku. Kalau mau sambat, mau marah-marah, atau mau nangis karena capek, tumpahin semuanya ke aku ya. Aku siap dengerin dari A sampai Z."><span class="mb-12 flex h-12 w-12 items-center justify-center rounded-full bg-white/70 text-rose"><i data-lucide="heart-handshake" class="h-5 w-5"></i></span><span class="block text-xs font-bold uppercase tracking-widest text-rose/70">kartu 3</span><span class="mt-2 block font-display text-3xl font-semibold leading-none">pengingat kalau<br>kamu gak sendirian</span><span class="mt-8 flex items-center gap-2 text-xs font-bold text-ink/60">buka perlahan <i data-lucide="arrow-up-right" class="h-3 w-3 transition group-hover:translate-x-1 group-hover:-translate-y-1"></i></span></button>
+      <button class="envelope group rounded-sm border border-rose/15 bg-[#f8e4d9] p-7 text-left shadow-soft" data-message="🎟️ KUPON HARI INI: Berhak mendapatkan 1x makanan/minuman favorit + bebas marah-marah sepuasnya tanpa di-judge + peluk hangat dari aku! Silakan klaim kapan saja kamu siap. 🤗✨"><span class="mb-12 flex h-12 w-12 items-center justify-center rounded-full bg-white/70 text-rose"><i data-lucide="ticket" class="h-5 w-5"></i></span><span class="block text-xs font-bold uppercase tracking-widest text-rose/70">kartu 4</span><span class="mt-2 block font-display text-3xl font-semibold leading-none">kupon<br>penghilang stres</span><span class="mt-8 flex items-center gap-2 text-xs font-bold text-ink/60">klaim kapan saja <i data-lucide="arrow-up-right" class="h-3 w-3 transition group-hover:translate-x-1 group-hover:-translate-y-1"></i></span></button>
+    </div>
+    <div id="messageBox" class="mx-auto mt-7 hidden max-w-2xl border-l-2 border-rose bg-white/70 px-6 py-5 shadow-sm"><p class="font-hand text-3xl leading-tight text-ink/80"></p></div>
+  </section>
+
+  <section class="bg-[#f4e8e6] px-6 py-24 lg:px-10 lg:py-28">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[.8fr_1.2fr]">
+      <div><p class="mb-3 text-xs font-bold uppercase tracking-[.22em] text-rose">untuk hari ini</p><h2 class="font-display text-5xl font-semibold leading-none sm:text-6xl">Satu pengingat<br><em class="font-hand font-medium text-rose">kecil</em> tentangmu.</h2><p class="mt-6 max-w-sm text-sm leading-7 text-ink/60">Tekan tombolnya kalau kamu ingin mendengar sesuatu yang mungkin sedang perlu kamu dengar.</p><button id="affirmationButton" class="mt-8 inline-flex items-center gap-3 rounded-full border border-ink/15 bg-white px-5 py-3 text-sm font-bold shadow-sm transition hover:-translate-y-0.5 hover:border-rose hover:text-rose"><i data-lucide="sparkles" class="h-4 w-4 text-rose"></i> acak afirmasi</button></div>
+      <div class="relative flex min-h-[260px] items-center justify-center"><div class="absolute h-64 w-64 rounded-full border border-rose/20"></div><div class="absolute h-48 w-48 rounded-full border border-rose/20"></div><div class="relative mx-5 max-w-md rotate-[-2deg] bg-[#fffdf9] px-8 py-10 text-center shadow-paper sm:px-14"><i data-lucide="quote" class="mx-auto mb-3 h-6 w-6 text-rose/60"></i><p id="affirmationText" class="font-display text-3xl font-semibold leading-tight text-ink sm:text-4xl">Kamu tidak harus menjadi versi terbaikmu setiap hari untuk tetap layak disayangi.</p><span class="mt-5 block font-hand text-xl text-rose">dengan penuh percaya</span></div></div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-6 py-24 lg:px-10 lg:py-32"><div class="mb-12 flex items-end justify-between gap-5"><div><p class="mb-3 text-xs font-bold uppercase tracking-[.22em] text-rose">satu kenangan</p><h2 class="font-display text-5xl font-semibold leading-none sm:text-6xl">Yang ingin<br>kuingat.</h2></div><p class="hidden max-w-xs text-right text-sm leading-6 text-ink/55 sm:block">Satu foto, satu cerita yang selalu ingin kusimpan.</p></div><div class="grid items-center gap-12 md:grid-cols-[minmax(260px,380px)_1fr] md:gap-20">
+    <button class="flip-card mx-auto w-full max-w-sm text-left" aria-label="Balik foto untuk membaca cerita"><div class="flip-inner relative aspect-[3/4]"><div class="flip-face absolute inset-0 bg-white p-3 pb-12 shadow-paper"><img class="h-full w-full object-cover" src="assets/WhatsApp%20Image%202026-08-26%20at%2013.20.04.jpeg" alt="Foto kenangan Kaykayyy" /><p class="absolute bottom-2 left-0 w-full text-center font-hand text-2xl text-ink/75">hari-hari baik</p></div><div class="flip-face flip-back absolute inset-0 flex flex-col justify-between bg-[#fbeaec] p-6 shadow-paper sm:p-7"><i data-lucide="quote" class="h-6 w-6 text-rose"></i><p class="font-display text-2xl font-semibold leading-tight sm:text-3xl">“Ternyata bahagia sering datang dalam bentuk yang sederhana.”</p><span class="font-hand text-xl text-rose sm:text-2xl">— catatan kecil</span></div></div></button>
+    <div class="max-w-xl"><p class="mb-4 text-xs font-bold uppercase tracking-[.22em] text-rose">deskripsi foto</p><h3 class="font-display text-4xl font-semibold leading-tight sm:text-5xl">Hari yang tidak perlu dibuat istimewa.</h3><p class="mt-6 text-[15px] leading-8 text-ink/60">Ada tawa yang tidak direncanakan, obrolan yang memanjang, dan rasa nyaman karena tidak perlu menjadi siapa-siapa. Mungkin itulah alasan momen sederhana ini selalu terasa paling dekat.</p><div class="mt-8 flex items-center gap-4 border-t border-ink/10 pt-5"><span class="flex h-10 w-10 items-center justify-center rounded-full bg-blush text-rose"><i data-lucide="camera" class="h-4 w-4"></i></span><div><p class="text-xs font-bold uppercase tracking-widest text-ink/45">catatan kecil</p><p class="mt-1 font-hand text-2xl text-rose">simpan momen baik-baik</p></div></div></div>
+  </div></section>
+
+  <section class="bg-ink px-6 py-24 text-white lg:px-10 lg:py-28"><div class="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[1fr_.9fr] lg:items-center"><div><p class="mb-3 text-xs font-bold uppercase tracking-[.22em] text-blush">hadiah kecil</p><h2 class="font-display text-5xl font-semibold leading-none sm:text-6xl">Gosok pelan,<br><em class="font-hand font-medium text-blush">temukan sesuatu.</em></h2><p class="mt-6 max-w-sm text-sm leading-7 text-white/60">Ada kejutan kecil di balik lapisan ini. Tidak perlu buru-buru.</p></div><div class="scratch-wrap mx-auto w-full max-w-sm"><div class="relative aspect-[1.65/1] overflow-hidden rounded-sm bg-[#fff7df] shadow-paper"><div class="absolute inset-0 flex flex-col items-center justify-center text-center text-ink"><i data-lucide="ticket" class="mb-3 h-7 w-7 text-rose"></i><span class="font-hand text-4xl">Kupon es krim</span><span class="mt-1 text-xs font-bold uppercase tracking-widest text-ink/50">kapan pun kamu mau</span></div><canvas id="scratchCanvas" class="absolute inset-0 h-full w-full cursor-crosshair"></canvas></div><div class="mt-4 flex items-center justify-between text-xs text-white/45"><span>usap dengan jari atau mouse</span><button id="resetScratch" class="font-bold text-blush transition hover:text-white">ulang</button></div></div></div></section>
+
+  <section class="relative overflow-hidden bg-[#fbeaec] px-6 py-28 text-center lg:px-10"><div class="relative z-10 mx-auto max-w-2xl"><p class="mb-3 text-xs font-bold uppercase tracking-[.22em] text-rose">satu hal terakhir</p><h2 class="font-display text-6xl font-semibold leading-[.9] sm:text-8xl">Sini, <em class="font-hand font-medium text-rose">peluk</em> dulu.</h2><p class="mx-auto mt-7 max-w-md text-sm leading-7 text-ink/60">Untuk saat-saat ketika kata-kata tidak cukup. Tekan tombolnya, dan biarkan layar mengirimkan sedikit hangat.</p><button id="hugButton" class="mt-9 inline-flex items-center gap-3 rounded-full bg-rose px-7 py-4 text-sm font-bold text-white shadow-paper transition hover:-translate-y-1 hover:bg-ink"><i data-lucide="heart" class="h-5 w-5 fill-current"></i> kirim peluk</button></div><div class="absolute -left-16 top-12 h-48 w-48 rounded-full border border-rose/15"></div><div class="absolute -right-20 bottom-0 h-72 w-72 rounded-full border border-rose/15"></div></section>
+  <footer class="bg-[#fff8f6] px-6 py-8 text-center text-xs font-semibold tracking-wide text-ink/40">dibuat dengan niat baik, untuk kamu yang berarti.</footer>
+
+  <audio id="audio" loop src="assets/Hindia%20-%20everything%20u%20are%20_%20Lirik%20Lagu.mp3"></audio>
+  <script>
+    lucide.createIcons();
+    const audio = document.getElementById('audio');
+    const musicButton = document.getElementById('musicButton');
+    const musicLabel = document.getElementById('musicLabel');
+    musicButton.addEventListener('click', async () => {
+      if (audio.paused) {
+        try {
+          await audio.play();
+          musicButton.classList.add('music-playing');
+          musicLabel.textContent = 'Jeda lagu';
+        } catch (_) {
+          musicButton.classList.remove('music-playing');
+          musicLabel.textContent = 'Putar lagu';
+        }
+      } else {
+        audio.pause();
+        musicButton.classList.remove('music-playing');
+        musicLabel.textContent = 'Putar lagu';
+      }
+    });
+
+    const messageBox = document.getElementById('messageBox');
+    document.querySelectorAll('.envelope').forEach((envelope) => envelope.addEventListener('click', () => {
+      messageBox.querySelector('p').textContent = envelope.dataset.message;
+      messageBox.classList.remove('hidden');
+      messageBox.classList.remove('toast'); void messageBox.offsetWidth; messageBox.classList.add('toast');
+    }));
+
+    const affirmations = [
+      'Kamu tidak harus menjadi versi terbaikmu setiap hari untuk tetap layak disayangi.',
+      'Cara kamu bertahan sampai hari ini sudah merupakan keberanian yang besar.',
+      'Dunia terasa lebih baik karena ada hal-hal yang hanya bisa kamu bawa ke dalamnya.',
+      'Kamu boleh beristirahat. Nilaimu tidak pernah ditentukan oleh seberapa banyak yang kamu selesaikan.'
+    ];
+    const affirmationText = document.getElementById('affirmationText');
+    document.getElementById('affirmationButton').addEventListener('click', () => {
+      let next = affirmations[Math.floor(Math.random() * affirmations.length)];
+      while (next === affirmationText.textContent && affirmations.length > 1) next = affirmations[Math.floor(Math.random() * affirmations.length)];
+      affirmationText.style.opacity = '0';
+      setTimeout(() => { affirmationText.textContent = next; affirmationText.style.opacity = '1'; }, 180);
+    });
+    affirmationText.style.transition = 'opacity .18s ease';
+
+    document.querySelectorAll('.flip-card').forEach((card) => card.addEventListener('click', () => card.classList.toggle('is-flipped')));
+
+    const canvas = document.getElementById('scratchCanvas');
+    const context = canvas.getContext('2d');
+    let scratching = false;
+    function setupScratch() { const ratio = window.devicePixelRatio || 1; canvas.width = canvas.clientWidth * ratio; canvas.height = canvas.clientHeight * ratio; context.scale(ratio, ratio); context.fillStyle = '#d97987'; context.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight); context.fillStyle = 'rgba(255,255,255,.18)'; context.font = '600 13px Manrope'; context.textAlign = 'center'; context.fillText('GOSOK DI SINI', canvas.clientWidth / 2, canvas.clientHeight / 2 + 4); }
+    function scratch(event) { if (!scratching) return; const rect = canvas.getBoundingClientRect(); const point = event.touches ? event.touches[0] : event; context.globalCompositeOperation = 'destination-out'; context.beginPath(); context.arc(point.clientX - rect.left, point.clientY - rect.top, 22, 0, Math.PI * 2); context.fill(); }
+    canvas.addEventListener('pointerdown', (event) => { scratching = true; scratch(event); }); canvas.addEventListener('pointermove', scratch); window.addEventListener('pointerup', () => scratching = false);
+    document.getElementById('resetScratch').addEventListener('click', setupScratch); window.addEventListener('resize', setupScratch); setupScratch();
+
+    document.getElementById('hugButton').addEventListener('click', () => { for (let index = 0; index < 24; index += 1) { const heart = document.createElement('span'); heart.className = 'heart'; heart.textContent = ['♥', '♡', '✦'][index % 3]; heart.style.left = `${8 + Math.random() * 84}%`; heart.style.bottom = `${8 + Math.random() * 10}%`; heart.style.color = ['#d97987', '#a8b9a5', '#f5cfd2', '#f5e4b3'][index % 4]; heart.style.fontSize = `${14 + Math.random() * 18}px`; heart.style.animationDelay = `${Math.random() * .45}s`; document.body.appendChild(heart); setTimeout(() => heart.remove(), 2600); } showToast('Peluk terkirim. Simpan baik-baik, ya.'); });
+    function showToast(message) { const toast = document.createElement('div'); toast.className = 'toast fixed bottom-7 left-1/2 z-50 -translate-x-1/2 rounded-full bg-ink px-5 py-3 text-center text-xs font-bold text-white shadow-paper'; toast.textContent = message; document.body.appendChild(toast); setTimeout(() => toast.remove(), 2800); }
+  </script>
+</body>
+</html>
