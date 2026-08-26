@@ -59,6 +59,8 @@
     .envelope:hover { transform: translateY(-4px) rotate(-1deg); box-shadow: 0 18px 32px rgba(91,58,64,.14); }
     .toast { animation: toast-in .3s ease-out both; }
     @keyframes toast-in { from { opacity: 0; transform: translate(-50%, 16px); } to { opacity: 1; transform: translate(-50%, 0); } }
+    .message-reveal { animation: message-in .3s ease-out both; }
+    @keyframes message-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
 <body class="font-sans paper-grain">
@@ -94,7 +96,7 @@
       <button class="envelope group rounded-sm border border-butter/40 bg-[#fff7df] p-7 text-left shadow-soft" data-message="Tadi kamu mungkin ngerasa sendirian nanggung semuanya. Tapi begitu kelas selesai, inget ya kalau kamu punya aku. Kamu gak perlu pura-pura kuat di depan aku. Kalau mau sambat, mau marah-marah, atau mau nangis karena capek, tumpahin semuanya ke aku ya. Aku siap dengerin dari A sampai Z."><span class="mb-12 flex h-12 w-12 items-center justify-center rounded-full bg-white/70 text-rose"><i data-lucide="heart-handshake" class="h-5 w-5"></i></span><span class="block text-xs font-bold uppercase tracking-widest text-rose/70">kartu 3</span><span class="mt-2 block font-display text-3xl font-semibold leading-none">pengingat kalau<br>kamu gak sendirian</span><span class="mt-8 flex items-center gap-2 text-xs font-bold text-ink/60">buka perlahan <i data-lucide="arrow-up-right" class="h-3 w-3 transition group-hover:translate-x-1 group-hover:-translate-y-1"></i></span></button>
       <button class="envelope group rounded-sm border border-rose/15 bg-[#f8e4d9] p-7 text-left shadow-soft" data-message="🎟️ KUPON HARI INI: Berhak mendapatkan 1x makanan/minuman favorit + bebas marah-marah sepuasnya tanpa di-judge + peluk hangat dari aku! Silakan klaim kapan saja kamu siap. 🤗✨"><span class="mb-12 flex h-12 w-12 items-center justify-center rounded-full bg-white/70 text-rose"><i data-lucide="ticket" class="h-5 w-5"></i></span><span class="block text-xs font-bold uppercase tracking-widest text-rose/70">kartu 4</span><span class="mt-2 block font-display text-3xl font-semibold leading-none">kupon<br>penghilang stres</span><span class="mt-8 flex items-center gap-2 text-xs font-bold text-ink/60">klaim kapan saja <i data-lucide="arrow-up-right" class="h-3 w-3 transition group-hover:translate-x-1 group-hover:-translate-y-1"></i></span></button>
     </div>
-    <div id="messageBox" class="mx-auto mt-7 hidden max-w-2xl border-l-2 border-rose bg-white/70 px-6 py-5 shadow-sm"><p class="font-hand text-3xl leading-tight text-ink/80"></p></div>
+    <div id="messageBox" class="mx-auto mt-7 hidden w-full max-w-2xl min-w-0 border-l-2 border-rose bg-white/70 px-4 py-4 shadow-sm sm:px-6 sm:py-5"><p class="min-w-0 break-words font-hand text-2xl leading-tight text-ink/80 sm:text-3xl"></p></div>
   </section>
 
   <section class="bg-[#f4e8e6] px-6 py-24 lg:px-10 lg:py-28">
@@ -141,7 +143,7 @@
     document.querySelectorAll('.envelope').forEach((envelope) => envelope.addEventListener('click', () => {
       messageBox.querySelector('p').textContent = envelope.dataset.message;
       messageBox.classList.remove('hidden');
-      messageBox.classList.remove('toast'); void messageBox.offsetWidth; messageBox.classList.add('toast');
+      messageBox.classList.remove('message-reveal'); void messageBox.offsetWidth; messageBox.classList.add('message-reveal');
     }));
 
     const affirmations = [
